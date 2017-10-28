@@ -19,9 +19,13 @@
     <platform name="android">
         <allow-intent href="market:*" />
 		<preference name="android-targetSdkVersion" value="19" />
+	     <config-file target="AndroidManifest.xml" parent="/manifest">
+        
+
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> 
+		         </config-file>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
