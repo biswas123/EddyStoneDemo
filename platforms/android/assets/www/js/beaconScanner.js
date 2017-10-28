@@ -83,21 +83,19 @@
 				+ '</p>';
 			html += htmlBeacon
 
-			var myBeaconNID = 'f7 82 6d a6 bc 5b 71 e0 89 3e'; //hardcoded
-			if (apiBeaconNID(beacon) && apiBeaconNID(beacon).trim().toLowerCase() == myBeaconNID) {
-				var bUrl = "http://beacon.homelink.solutions/3/?b=";
+			var bUrl = "http://beacon.homelink.solutions/3/?b=";
 
-				bUrl = bUrl + decodeURIComponent(apiBeaconNID(beacon).trim());
-				//bUrl = bUrl + "&b=" + apiBeaconBID(beacon);
+			bUrl = bUrl + decodeURIComponent(apiBeaconNID(beacon).trim());
+			//bUrl = bUrl + "&b=" + apiBeaconBID(beacon);
 
-				//bUrl = bUrl + "&v=" + apiBeaconVoltage(beacon);
-				//bUrl = bUrl + "&rs=" + apiBeaconRSSI(beacon);
-				//bUrl = bUrl + "&t=" + apiBeaconTxPower(beacon);
-				//bUrl = bUrl + "&nm=" + apiBeaconName(beacon);
-				//bUrl = bUrl + "&d=" + calculateAccuracy(beacon);
+			//bUrl = bUrl + "&v=" + apiBeaconVoltage(beacon);
+			//bUrl = bUrl + "&rs=" + apiBeaconRSSI(beacon);
+			//bUrl = bUrl + "&t=" + apiBeaconTxPower(beacon);
+			//bUrl = bUrl + "&nm=" + apiBeaconName(beacon);
+			//bUrl = bUrl + "&d=" + calculateAccuracy(beacon);
 
-				callWebservice(bUrl);
-			}
+			callWebservice(bUrl);
+			
 
 		}
 		document.querySelector('#found-beacons').innerHTML = html;
